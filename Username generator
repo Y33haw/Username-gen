@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Username Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .username {
+            margin-top: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Funny & Relatable Username Generator</h1>
+    <button onclick="generateUsername()">Generate Username</button>
+    <div class="username" id="username">Click the button for a username!</div>
+
+    <script>
+        function generateUsername() {
+            const adjectives = [
+                "Tired", "Hungry", "Procrastinating", "Clumsy", "Overthinking", 
+                "Sarcastic", "Sleepy", "Anxious", "Awkward", "Sassy"
+            ];
+            const nouns = [
+                "CoffeeAddict", "CatParent", "SnackThief", "SerialBinger", 
+                "NightOwl", "PillowHugger", "KeyboardSmasher", "Overthinker", 
+                "ShowerSinger", "CouchPotato"
+            ];
+            const randomAdjective = adjectives[Math.floor(Math.random() * adjectives.length)];
+            const randomNoun = nouns[Math.floor(Math.random() * nouns.length)];
+            const randomNumber = Math.floor(Math.random() * 1000);
+
+            const username = `${randomAdjective}${randomNoun}${randomNumber}`;
+            document.getElementById("username").innerText = username;
+        }
+    </script>
+</body>
+</html>
