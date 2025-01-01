@@ -8,3 +8,4 @@ to use this, just simply download the username generator file and double click i
 or you can just use a demo
 
 Have fun using this!
+ (1 error pointed and fixed by ai, code refined by ai)
